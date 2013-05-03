@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+	<title>AngularJS: ng-show and ng-hide example</title>
+</head>
+<body ng-app="NgHideShowApp">
+	<div ng-controller="AppCtrl">
+		<div>
+			<input type="checkbox" ng-model="showText">Change Text
+			<br>
+			<div ng-show="showText">
+				<span style="color:red;">Displaying the div</span>
+			</div>
+		</div>
+		<br><br>
+		<div>
+			<input type="checkbox" ng-model="toggleColors1">Toggle Colors
+			<br>
+			<div ng-show="toggleColors1" style="width:500px; height:250px; background-color:green"></div>
+			<div ng-hide="toggleColors1" style="width:500px; height:250px; background-color:yellow"></div>
+		</div>
+		<br><br>
+		<div>
+			<input type="checkbox" ng-model="toggleColors2">Toggle Colors (ng-show/ng-hide implemented as class)
+			<br>
+			<div class="ng-show:toggleColors2;" style="width:500px; height:250px; background-color:black"></div>
+			<div class="ng-hide:toggleColors2;" style="width:500px; height:250px; background-color:purple"></div>
+		</div>
+		<br><br>
+		<div>
+			<button ng-click="toggleColor()">Toggle Color</button>
+			<div ng-show="showColor()" style="font-size:40px; color:#dd1515;">AngularJS</div>
+			<div ng-hide="showColor()" style="font-size:40px; color:#2f2f2f;">AngularJS</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="showhide.js"></script>
+</body>
+</html>
